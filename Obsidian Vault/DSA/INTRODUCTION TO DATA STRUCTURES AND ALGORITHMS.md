@@ -49,8 +49,8 @@ Before learning individual data structures, you should understand how to measure
 
 There are two primary measurements:
 
-- [Time Complexity]: How the execution time grows as input size increases.
-- [Space Complexity]: How the additional memory requirement grows as input size increases.
+- [[Time Complexity]]: How the execution time grows as input size increases.
+- [[Space Complexity]]: How the additional memory requirement grows as input size increases.
 
 ----
 # Algorithms
