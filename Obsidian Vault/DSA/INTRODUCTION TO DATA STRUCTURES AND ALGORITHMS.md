@@ -8,23 +8,23 @@ Whether you are developing backend applications, machine learning systems, game 
 ### Data Structures
 How data is organized and stored.
 Examples:
-- Arrays 
-- Linked Lists
-- Stacks
-- Queues
-- Trees
-- Graphs
-- Hash Tables
+- [[Arrays]]
+- [[Linked Lists]]
+- [[Stacks]]
+- [[Queues]]
+- [[Trees]]
+- [[Graphs]]
+- [[Hash Tables]]
 ### Algorithms
 How data is processed to solve problems.
 Examples:
-- Searching
-- Sorting
-- Recursion
-- Dynamic Programming
-- Graph Traversal
-- Shortest Path
-- Greedy Algorithms
+- [[Searching Algorithms]]
+- [[Sorting Algorithms]]
+- [[Recursion]]
+- [[Dynamic Programming]]
+- [[Graph Traversal]]
+- [[Shortest Path]]
+- [[Greedy Algorithms]]
 - ---
 ## Why do we need DSA?
 

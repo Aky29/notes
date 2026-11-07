@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DSA/Space Complexity.md",
+                "file": "Machine learning/Machine Learning.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Space Complexity"
+              "title": "Machine Learning"
             }
           }
         ],
@@ -187,16 +187,19 @@
       "bases:Create new base": false
     }
   },
-  "active": "b1f741964339d2fc",
+  "active": "7bde4b1da11afb8d",
   "lastOpenFiles": [
-    "DSA/INTRODUCTION TO DATA STRUCTURES AND ALGORITHMS.md",
-    "DSA/Time Complexity.md",
-    "DSA/Space Complexity.md",
-    "DSA/Size Complexity.md",
+    "Web development",
     "Machine learning/Trees in Machine learning.md",
     "Machine learning/Machine Learning.md",
+    "DSA/INTRODUCTION TO DATA STRUCTURES AND ALGORITHMS.md",
+    "DSA/Arrays.md",
+    "DSA/Space Complexity.md",
+    "DSA/Sorting Algorithms.md",
+    "DSA/Searching Algorithms.md",
+    "DSA/Time Complexity.md",
+    "DSA/Size Complexity.md",
     "machine learning.md",
-    "Untitled",
     "DSA",
     "Deep learning",
     "Machine learning",
