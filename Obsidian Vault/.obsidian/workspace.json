@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hash Table.md",
+                "file": "DSA/Disjoint Set Union (DSU).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Hash Table"
+              "title": "Disjoint Set Union (DSU)"
             }
           }
         ],
@@ -187,12 +187,17 @@
       "bases:Create new base": false
     }
   },
-  "active": "fdf9a550d0db5832",
+  "active": "7bde4b1da11afb8d",
   "lastOpenFiles": [
-    "Queue.md",
-    "Hash Table.md",
+    "DSA/Trie.md",
+    "DSA/Graph.md",
+    "DSA/Heap.md",
+    "DSA/Tree.md",
+    "DSA/Stack.md",
+    "DSA/Disjoint Set Union (DSU).md",
     "DSA/Data Structures.md",
-    "Stack.md",
+    "DSA/Hash Table.md",
+    "DSA/Queue.md",
     "DSA/Linked List.md",
     "DSA/Array.md",
     "DSA/INTRODUCTION TO DATA STRUCTURES AND ALGORITHMS.md",

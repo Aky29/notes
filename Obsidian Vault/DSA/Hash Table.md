@@ -283,7 +283,9 @@ In linear probing, if the calculated position is occupied, the next position is 
 
 Formula:
 
-rehash(key) = (index + i) % table-size
+[  
+h_i(key) = (h(key) + i) \bmod m  
+]
 
 Where:
 
@@ -298,9 +300,9 @@ Example:
 
 Suppose the table size is 10 and the hash function is:
 
-
-h(key) = key \mod(10)  
-
+[  
+h(key) = key \bmod 10  
+]
 
 Insert keys `25`, `35`, and `45`.
 
@@ -336,7 +338,9 @@ In quadratic probing, the interval between attempts increases quadratically.
 
 Formula:
 
-h(k,i)=(h(k)+c1​i+c2​i2)(modm)
+[  
+h_i(key) = (h(key) + c_1i + c_2i^2) \bmod m  
+]
 
 Where:
 
@@ -485,9 +489,9 @@ Example:
 
 If a hash table has 10 slots and contains 7 elements:
 
-  
-alpha = 7/10 = 0.7  
-
+[  
+\alpha = \frac{7}{10} = 0.7  
+]
 
 This means 70% of the table's slots are occupied.
 
