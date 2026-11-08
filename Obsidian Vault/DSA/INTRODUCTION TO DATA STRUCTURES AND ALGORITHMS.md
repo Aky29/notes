@@ -5,26 +5,26 @@ Whether you are developing backend applications, machine learning systems, game 
 
 ## What is DSA?
  DSA consists of two major concepts:
-### Data Structures
+### [[Data Structures]]
 How data is organized and stored.
 Examples:
-- [[Arrays]]
-- [[Linked Lists]]
-- [[Stacks]]
-- [[Queues]]
-- [[Trees]]
-- [[Graphs]]
-- [[Hash Tables]]
-### Algorithms
+- Arrays
+- Linked Lists
+- Stacks
+- Queues
+- Trees
+- Graphs
+- Hash Tables
+### [[Algorithms]]
 How data is processed to solve problems.
 Examples:
-- [[Searching Algorithms]]
-- [[Sorting Algorithms]]
-- [[Recursion]]
-- [[Dynamic Programming]]
-- [[Graph Traversal]]
-- [[Shortest Path]]
-- [[Greedy Algorithms]]
+- Searching Algorithms
+- Sorting Algorithms
+- Recursion
+- Dynamic Programming
+- Graph Traversal
+- Shortest Path
+- Greedy Algorithms
 - ---
 ## Why do we need DSA?
 
