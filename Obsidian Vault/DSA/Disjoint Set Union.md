@@ -1,35 +1,24 @@
 # About
 
 **Disjoint Set Union (DSU)** is a data structure used to manage a collection of non-overlapping sets.
-
 It is also called **Union-Find** because it mainly supports two operations:
 
 1. Find
-    
 2. Union
-    
 
 - Find determines which set an element belongs to.
-    
 - Union combines two different sets into one set.
-    
 
 DSU is particularly useful when we need to maintain and check connectivity between elements efficiently.
-
 For example, consider 5 elements:
-
 ```
 1  2  3  4  5
 ```
-
 Initially, every element belongs to its own set.
-
 ```
 {1}  {2}  {3}  {4}  {5}
 ```
-
 After performing:
-
 ```
 Union(1, 2)
 Union(3, 4)
@@ -47,28 +36,18 @@ Now, `Find(1)` and `Find(4)` return the same representative because both element
 DSU is commonly used in:
 
 - Network connectivity
-    
 - Cycle detection
-    
 - Kruskal's Algorithm
-    
 - Connected components
-    
 - Grouping related elements
-    
 - Dynamic connectivity problems
-    
-
 ---
-
 # Terminologies Used in DSU
 
 ## 1. Set
 
 A set is a collection of distinct elements.
-
 In DSU, each element belongs to exactly one set.
-
 Example:
 
 ```
@@ -80,7 +59,6 @@ Example:
 ## 2. Disjoint Sets
 
 Two sets are disjoint if they do not contain any common elements.
-
 Example:
 
 ```
@@ -93,21 +71,17 @@ Here, A and B are disjoint sets.
 ## 3. Representative
 
 A representative is the element used to identify a particular set.
-
 In a tree-based DSU, the representative is generally the root of that set's tree.
-
 All elements belonging to the same set have the same representative.
 
 ## 4. Parent
 
 Every element stores a reference to its parent.
-
 The parent array is used to represent the structure of the sets.
 
 ## 5. Root
 
 The root is the topmost element of a DSU tree.
-
 A root is identified when:
 
 ```
@@ -119,7 +93,6 @@ The root acts as the representative of its set.
 ## 6. Component
 
 A component is a group of elements that belong to the same set.
-
 Initially, every element is its own component.
 
 ## 7. Path Compression
@@ -139,9 +112,7 @@ An optimization technique that combines two trees based on their number of eleme
 # Structure of DSU
 
 DSU commonly represents each set as a rooted tree.
-
 Each node points towards its parent, and the root represents the entire set.
-
 Example:
 
 ```
@@ -177,7 +148,6 @@ NOTE :- A DSU tree is not necessarily a binary tree. A node can have any number 
 # Initialisation
 
 Initially, every element belongs to its own individual set.
-
 For `n` elements, we create a parent array.
 
 ```
@@ -215,9 +185,7 @@ DSU mainly supports two fundamental operations.
 ## 1. Find
 
 Find determines the representative of the set to which an element belongs.
-
 It starts from the given element and follows its parent references until it reaches the root.
-
 The root is the representative.
 
 Example:
@@ -260,7 +228,6 @@ int find(int x) {
 ```
 
 Time Complexity: O(h)
-
 Where h is the height of the DSU tree.
 
 NOTE :- Without optimisations, a DSU tree can become a chain, making Find take O(n) time.
@@ -268,9 +235,7 @@ NOTE :- Without optimisations, a DSU tree can become a chain, making Find take O
 ## 2. Union
 
 Union combines the sets containing two given elements.
-
 It first finds the representatives of both elements.
-
 If their representatives are different, their sets are combined.
 
 Example:

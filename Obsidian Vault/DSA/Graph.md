@@ -1,36 +1,25 @@
 # About
 
 A **Graph** is a non-linear data structure consisting of a collection of vertices (nodes) and edges (connections between vertices).
-
 Unlike trees, graphs do not necessarily follow a hierarchical structure. A graph can contain cycles, multiple paths between vertices and disconnected components.
-
 Graphs are used to represent relationships and connections between different entities.
 
 For example:
 
 - Social networks represent relationships between people.
-    
 - Google Maps represents locations and roads.
-    
 - Computer networks represent connected computers.
-    
 - Websites represent connections between web pages.
-    
 - Recommendation systems represent relationships between users and products.
-    
 
 A graph is generally represented as:
-
 ```
 G = (V, E)
 ```
-
 Where:
 
 - `V` = Set of vertices.
-    
 - `E` = Set of edges.
-    
 
 Example:
 
@@ -57,13 +46,11 @@ E = {(A,B), (A,C), (B,C), (B,D), (C,E), (D,E)}
 ## 1. Vertex (Node)
 
 A vertex is an individual element of a graph.
-
 It represents an entity such as a person, city or computer.
 
 ## 2. Edge
 
 An edge represents a connection between two vertices.
-
 For example, an edge between A and B represents a connection between those vertices.
 
 ## 3. Adjacent Vertices
@@ -77,7 +64,6 @@ An edge is incident to a vertex if that vertex is one of its endpoints.
 ## 5. Degree of a Vertex
 
 The degree of a vertex is the number of edges connected to it.
-
 For an undirected graph:
 
 ```
@@ -129,7 +115,6 @@ A connected component is a maximal group of vertices in which every vertex is re
 ## 13. Self-Loop
 
 An edge that connects a vertex to itself is called a self-loop.
-
 Example:
 
 ```
@@ -143,18 +128,12 @@ Two or more edges connecting the same pair of vertices are called parallel edges
 ## 15. Weight
 
 A weight is a numerical value assigned to an edge.
-
 It can represent:
 
 - Distance
-    
 - Cost
-    
 - Time
-    
 - Network capacity
-    
-
 ## 16. Subgraph
 
 A subgraph is a graph formed using a subset of the vertices and edges of another graph.
@@ -162,11 +141,8 @@ A subgraph is a graph formed using a subset of the vertices and edges of another
 ## 17. Walk, Trail and Path
 
 - Walk: A sequence of vertices where vertices and edges may repeat.
-    
 - Trail: A walk in which no edge is repeated.
-    
-- Path: A walk in which no vertex is repeated.
-    
+- Path: A walk in which no vertex is repeated.    
 
 ---
 
@@ -177,11 +153,9 @@ Graphs can be classified according to their direction, edge weights and connecti
 ## 1. Undirected Graph
 
 An undirected graph is a graph in which edges do not have a direction.
-
 If A is connected to B, then B is also connected to A.
 
 Example:
-
 ```
        A
       / \
@@ -203,11 +177,8 @@ It is equivalent to:
 Applications:
 
 - Friendship networks
-    
 - Two-way roads
-    
 - Computer network connections
-    
 
 ## 2. Directed Graph (Digraph)
 
@@ -233,18 +204,13 @@ A -> B
 Applications:
 
 - Following relationships on social media
-    
 - One-way roads
-    
 - Web page links
-    
 - Task dependencies
-    
 
 ## 3. Weighted Graph
 
 A weighted graph is a graph in which edges contain numerical values called weights.
-
 Example:
 
 ```
@@ -260,22 +226,17 @@ The weights can represent distance, cost or time.
 Applications:
 
 - GPS navigation
-    
 - Network routing
-    
 - Transportation systems
-    
 
 ## 4. Unweighted Graph
 
 An unweighted graph is a graph in which edges do not have any associated numerical weights.
-
 All edges are treated equally.
 
 ## 5. Connected Graph
 
 An undirected graph is connected if there is a path between every pair of vertices.
-
 Example:
 
 ```
@@ -289,7 +250,6 @@ Every vertex is reachable from every other vertex.
 ## 6. Disconnected Graph
 
 A disconnected graph contains two or more connected components.
-
 Example:
 
 ```
@@ -337,13 +297,11 @@ D --- C
 ## 9. Acyclic Graph
 
 An acyclic graph does not contain any cycle.
-
 A Directed Acyclic Graph is commonly called a DAG.
 
 ## 10. Directed Acyclic Graph (DAG)
 
 A DAG is a directed graph that does not contain any directed cycle.
-
 Example:
 
 ```
@@ -356,18 +314,13 @@ A ---> B ---> D
 Applications:
 
 - Task scheduling
-    
 - Course prerequisites
-    
 - Build systems
-    
 - Dependency management
-    
 
 ## 11. Bipartite Graph
 
 A bipartite graph is a graph whose vertices can be divided into two disjoint sets such that every edge connects a vertex from one set to a vertex in the other set.
-
 There are no edges connecting vertices within the same set.
 
 Example:
@@ -385,30 +338,23 @@ Set A          Set B
 Applications:
 
 - Matching problems
-    
 - Job assignments
-    
 - Student-course relationships
-    
 - Recommendation systems
-    
 
 ## 12. Regular Graph
 
 A regular graph is a graph in which every vertex has the same degree.
-
 A graph where every vertex has degree `k` is called a k-regular graph.
 
 ## 13. Sparse Graph
 
 A sparse graph contains relatively few edges compared to the maximum possible number of edges.
-
 Adjacency lists are generally efficient for storing sparse graphs.
 
 ## 14. Dense Graph
 
 A dense graph contains a large number of edges compared to the maximum possible number of edges.
-
 Adjacency matrices can be useful for dense graphs.
 
 ---
@@ -416,20 +362,15 @@ Adjacency matrices can be useful for dense graphs.
 # Graph Representation
 
 A graph can be stored in memory using different representations.
-
 The most commonly used representations are:
 
 1. Adjacency Matrix
-    
 2. Adjacency List
-    
 3. Edge List
-    
 
 ## 1. Adjacency Matrix
 
 An adjacency matrix is a two-dimensional array used to represent connections between vertices.
-
 For a graph with `V` vertices, the matrix has dimensions:
 
 ```
@@ -437,7 +378,6 @@ V x V
 ```
 
 If an edge exists between two vertices, the corresponding position is marked as 1.
-
 Otherwise, it is marked as 0.
 
 Example:
@@ -487,25 +427,18 @@ For weighted graphs, store the weight instead of 1.
 ### Advantages
 
 - Easy to implement.
-    
 - Checking whether an edge exists takes O(1).
-    
 - Useful for dense graphs.
-    
 
 ### Disadvantages
 
 - Requires O(V²) space.
-    
 - Iterating over all neighbors of a vertex takes O(V).
-    
 - Inefficient for sparse graphs.
-    
 
 ## 2. Adjacency List
 
 An adjacency list stores the neighbors of each vertex.
-
 It is generally implemented using an array or vector of lists.
 
 Example:
@@ -560,18 +493,13 @@ adj[0].push_back({1, 10});
 ### Advantages
 
 - Requires O(V + E) space.
-    
 - Efficient for sparse graphs.
-    
 - Easy to traverse the neighbors of a vertex.
-    
 
 ### Disadvantages
 
 - Checking whether a specific edge exists can take O(degree of vertex).
-    
 - Slightly more complex than an adjacency matrix.
-    
 
 ## 3. Edge List
 
@@ -599,28 +527,23 @@ edges.push_back({0, 1, 10});
 ### Advantages
 
 - Simple representation.
-    
 - Requires O(E) space.
-    
 - Useful for algorithms that process all edges.
-    
 
 ### Disadvantages
 
 - Finding all neighbors of a vertex requires scanning the edge list.
-    
 - Checking whether a particular edge exists can take O(E).
-    
 
 ## Comparison of Graph Representations
 
-|Feature|Adjacency Matrix|Adjacency List|Edge List|
-|---|---|---|---|
-|Space|O(V²)|O(V + E)|O(E)|
-|Check Edge|O(1)|O(degree)|O(E)|
-|Find Neighbors|O(V)|O(degree)|O(E)|
-|Add Edge|O(1)|O(1)|O(1)|
-|Best For|Dense graphs|Sparse graphs|Edge-based algorithms|
+| Feature        | Adjacency Matrix | Adjacency List | Edge List             |
+| -------------- | ---------------- | -------------- | --------------------- |
+| Space          | O(V²)            | O(V + E)       | O(E)                  |
+| Check Edge     | O(1)             | O(degree)      | O(E)                  |
+| Find Neighbors | O(V)             | O(degree)      | O(E)                  |
+| Add Edge       | O(1)             | O(1)           | O(1)                  |
+| Best For       | Dense graphs     | Sparse graphs  | Edge-based algorithms |
 
 NOTE :- For most competitive programming problems, adjacency lists are the most commonly used representation.
 
@@ -633,9 +556,7 @@ Graph traversal is the process of visiting vertices in a graph systematically.
 The two most important graph traversal algorithms are:
 
 1. Breadth First Search (BFS)
-    
 2. Depth First Search (DFS)
-    
 
 Unlike trees, graphs can contain cycles. Therefore, we need a visited array or set to avoid visiting the same vertex repeatedly.
 
@@ -643,28 +564,19 @@ Unlike trees, graphs can contain cycles. Therefore, we need a visited array or s
 
 # 1. Breadth First Search (BFS)
 
-BFS is a graph traversal algorithm that explores vertices level by level.
-
+BFS is a graph traversal algorithm that explores vertices level by level
 It first visits all immediate neighbors of a vertex before moving to the next level.
-
 BFS uses a Queue.
 
 ### Working
 
 1. Select a starting vertex.
-    
 2. Mark it as visited.
-    
 3. Insert it into a Queue.
-    
 4. Remove the front element from the Queue.
-    
 5. Visit all its unvisited neighbors.
-    
 6. Mark those neighbors as visited and insert them into the Queue.
-    
 7. Repeat until the Queue becomes empty.
-    
 
 Example:
 
@@ -732,22 +644,15 @@ int main() {
 Using an adjacency list:
 
 - Time Complexity: O(V + E)
-    
 - Space Complexity: O(V)
-    
 
 Applications:
 
 - Shortest path in an unweighted graph.
-    
 - Finding connected components.
-    
 - Level-order exploration.
-    
 - Network broadcasting.
-    
 - Finding minimum number of edges between two vertices.
-    
 
 NOTE :- BFS finds the shortest path in terms of number of edges in an unweighted graph. It does not necessarily find the minimum-weight path in a weighted graph.
 
@@ -760,24 +665,16 @@ DFS is a graph traversal algorithm that explores a path as deeply as possible be
 It can be implemented using:
 
 - Recursion
-    
 - Stack
-    
 
 ### Working
 
 1. Select a starting vertex.
-    
 2. Mark it as visited.
-    
 3. Visit an unvisited neighbor.
-    
 4. Continue exploring deeper.
-    
 5. If no unvisited neighbor exists, backtrack.
-    
 6. Continue until all reachable vertices have been visited.
-    
 
 Example:
 
@@ -870,24 +767,16 @@ void DFS(int start, vector<vector<int>>& adj, int V) {
 Using an adjacency list:
 
 - Time Complexity: O(V + E)
-    
 - Space Complexity: O(V)
-    
 
 Applications:
 
 - Cycle detection.
-    
 - Connected components.
-    
 - Topological sorting.
-    
 - Path finding.
-    
 - Detecting bridges and articulation points.
-    
 - Solving maze problems.
-    
 
 ---
 
@@ -907,7 +796,6 @@ Applications:
 # Connected Components
 
 A connected component is a maximal set of vertices where every vertex is reachable from every other vertex.
-
 A disconnected graph can contain multiple connected components.
 
 Example:
@@ -923,16 +811,12 @@ F
 There are three connected components:
 
 1. A, B, C
-    
 2. D, E
-    
 3. F
-    
 
 ### Finding Connected Components Using DFS
 
 We can run DFS from every unvisited vertex.
-
 Every new DFS traversal identifies one connected component.
 
 C++ Implementation:
@@ -975,13 +859,11 @@ NOTE :- This implementation assumes an undirected graph. In directed graphs, con
 # Cycle Detection
 
 Cycle detection is the process of determining whether a graph contains a cycle.
-
 The approach depends on whether the graph is directed or undirected.
 
 ## 1. Cycle Detection in an Undirected Graph
 
 Using DFS, we keep track of the parent of the current vertex.
-
 If we encounter an already visited neighbor that is not the parent, a cycle exists.
 
 C++ Implementation:
@@ -1013,7 +895,6 @@ For a disconnected graph, call this function from every unvisited vertex.
 ## 2. Cycle Detection in a Directed Graph
 
 In directed graphs, we can use DFS with a recursion-stack tracking array.
-
 If we encounter a vertex that is already present in the current DFS path, a cycle exists.
 
 C++ Implementation:
@@ -1052,13 +933,11 @@ NOTE :- The parent check is important for undirected graphs, while the current r
 # Shortest Path Algorithms
 
 A shortest path is a path between two vertices with the minimum total cost or distance.
-
 Different algorithms are used depending on the graph structure and edge weights.
 
 ## 1. BFS Shortest Path
 
 BFS can find the shortest path in an unweighted graph.
-
 It works because BFS explores vertices in increasing order of the number of edges from the starting vertex.
 
 Time Complexity: O(V + E)
@@ -1066,11 +945,8 @@ Time Complexity: O(V + E)
 Applications:
 
 - Minimum number of moves.
-    
 - Shortest path in an unweighted network.
-    
 - Minimum number of edges between two vertices.
-    
 
 ## 2. Dijkstra's Algorithm
 
@@ -1081,19 +957,12 @@ It commonly uses a Min Priority Queue.
 ### Working
 
 1. Set the distance of the source vertex to 0.
-    
 2. Set all other distances to infinity.
-    
 3. Insert the source into a Min Priority Queue.
-    
 4. Extract the vertex with the smallest current distance.
-    
 5. Check all its neighboring vertices.
-    
 6. If a shorter path is found, update the distance.
-    
 7. Repeat until the Priority Queue becomes empty.
-    
 
 ### C++ Implementation
 
@@ -1163,28 +1032,20 @@ NOTE :- Dijkstra's Algorithm does not work correctly with negative edge weights.
 ## 3. Bellman-Ford Algorithm
 
 Bellman-Ford finds shortest paths from a single source vertex.
-
 Unlike Dijkstra's Algorithm, it supports negative edge weights.
-
 It can also detect reachable negative-weight cycles.
 
 ### Working
 
 1. Initialize source distance as 0.
-    
 2. Initialize all other distances as infinity.
-    
 3. Relax every edge V - 1 times.
-    
 4. Perform one additional relaxation pass.
-    
 5. If a distance can still be reduced, a reachable negative-weight cycle exists.
-    
 
 ### Edge Relaxation
 
 Relaxation means checking whether a shorter path can be obtained through an edge.
-
 For an edge `u -> v` with weight `w`:
 
 ```
@@ -1212,9 +1073,7 @@ Applications:
 ## 4. Floyd-Warshall Algorithm
 
 Floyd-Warshall finds shortest paths between every pair of vertices.
-
 It is an all-pairs shortest path algorithm.
-
 It uses Dynamic Programming.
 
 ### Working
@@ -1233,9 +1092,7 @@ dist[i][j] = min(
 ### Complexity
 
 - Time Complexity: O(V³)
-    
-- Space Complexity: O(V²)
-    
+- Space Complexity: O(V²)    
 
 It supports negative edge weights but does not produce meaningful shortest paths when a negative cycle exists.
 
@@ -1248,11 +1105,8 @@ A Minimum Spanning Tree is a spanning tree of a connected, undirected, weighted 
 A spanning tree:
 
 - Connects all vertices.
-    
 - Contains no cycles.
-    
 - Has exactly V - 1 edges.
-    
 
 An MST minimizes the total weight of these edges.
 
@@ -1284,15 +1138,10 @@ Prim's Algorithm builds an MST by starting from a vertex and repeatedly selectin
 ### Working
 
 1. Select any starting vertex.
-    
 2. Mark it as included in the MST.
-    
 3. Find the minimum-weight edge connecting the included vertices to an unvisited vertex.
-    
 4. Add that edge and vertex.
-    
 5. Repeat until all vertices are included.
-    
 
 It commonly uses a Min Priority Queue.
 
@@ -1301,23 +1150,16 @@ Time Complexity: O((V + E) log V) using an adjacency list and binary heap.
 ## 2. Kruskal's Algorithm
 
 Kruskal's Algorithm builds an MST by selecting edges in increasing order of their weights.
-
 It uses Disjoint Set Union (DSU) to detect cycles efficiently.
 
 ### Working
 
 1. Sort all edges by increasing weight.
-    
 2. Select the smallest edge.
-    
 3. Check whether its endpoints belong to different components.
-    
 4. If they belong to different components, include the edge.
-    
 5. Merge their components.
-    
 6. Continue until V - 1 edges are selected or all edges are processed.
-    
 
 Time Complexity: O(E log E), including edge sorting.
 
@@ -1328,7 +1170,6 @@ NOTE :- Prim's and Kruskal's algorithms work with connected, undirected, weighte
 # Topological Sorting
 
 Topological Sorting is a linear ordering of vertices in a Directed Acyclic Graph (DAG).
-
 For every directed edge:
 
 ```
@@ -1363,19 +1204,12 @@ Kahn's Algorithm uses the in-degree of vertices.
 ### Working
 
 1. Calculate the in-degree of every vertex.
-    
 2. Insert all vertices with in-degree 0 into a Queue.
-    
 3. Remove a vertex from the Queue.
-    
 4. Add it to the topological ordering.
-    
 5. Decrease the in-degree of all its outgoing neighbors.
-    
 6. Insert a neighbor into the Queue when its in-degree becomes 0.
-    
 7. Continue until the Queue becomes empty.
-    
 
 If fewer than V vertices are processed, the graph contains a directed cycle.
 
@@ -1430,7 +1264,6 @@ Time Complexity: O(V + E)
 ## 2. DFS Approach
 
 Topological sorting can also be performed using DFS.
-
 The basic idea is to push each vertex into a stack after all its outgoing neighbors have been processed.
 
 Reversing the finishing order produces a topological ordering.
@@ -1476,7 +1309,6 @@ Combines two different sets into one set.
 ### Path Compression
 
 Path Compression optimizes the Find operation.
-
 It makes each visited node point directly to the root of its set.
 
 ### Union by Size / Rank
@@ -1534,22 +1366,16 @@ public:
 With path compression and union by size/rank:
 
 - Find: Nearly O(1) amortized.
-    
 - Union: Nearly O(1) amortized.
-    
 
 More formally, the amortized complexity per operation is O(α(n)), where α is the inverse Ackermann function.
 
 Applications:
 
 - Kruskal's Algorithm.
-    
 - Cycle detection in undirected graphs.
-    
 - Network connectivity.
-    
 - Grouping connected elements.
-    
 
 ---
 
@@ -1572,11 +1398,8 @@ These concepts are commonly identified using DFS and discovery/low-link times.
 Applications:
 
 - Network reliability.
-    
 - Finding critical connections.
-    
 - Identifying vulnerable points in networks.
-    
 
 ---
 
@@ -1591,13 +1414,9 @@ Two commonly used algorithms are:
 It uses two DFS passes:
 
 1. Perform DFS on the original graph and record vertices in finishing order.
-    
 2. Reverse all directed edges.
-    
 3. Process vertices in reverse finishing order using DFS.
-    
 4. Every DFS traversal in the reversed graph identifies one SCC.
-    
 
 Time Complexity: O(V + E)
 
@@ -1608,41 +1427,34 @@ Tarjan's Algorithm finds SCCs using a single DFS traversal.
 It maintains:
 
 - Discovery time
-    
 - Low-link value
-    
 - Stack
-    
 
 Time Complexity: O(V + E)
 
 Applications:
 
 - Dependency analysis.
-    
 - Social network analysis.
-    
 - Detecting mutually reachable groups.
-    
 - Program analysis.
-    
 
 ---
 
 # Important Graph Algorithms Summary
 
-|Algorithm|Purpose|Time Complexity|
-|---|---|---|
-|BFS|Graph traversal|O(V + E)|
-|DFS|Graph traversal|O(V + E)|
-|Dijkstra|Single-source shortest path|O((V + E) log V)|
-|Bellman-Ford|Shortest path with negative weights|O(VE)|
-|Floyd-Warshall|All-pairs shortest path|O(V³)|
-|Prim|Minimum Spanning Tree|O((V + E) log V)|
-|Kruskal|Minimum Spanning Tree|O(E log E)|
-|Kahn's Algorithm|Topological Sorting|O(V + E)|
-|Kosaraju|Strongly Connected Components|O(V + E)|
-|Tarjan|Strongly Connected Components|O(V + E)|
+| Algorithm        | Purpose                             | Time Complexity  |
+| ---------------- | ----------------------------------- | ---------------- |
+| BFS              | Graph traversal                     | O(V + E)         |
+| DFS              | Graph traversal                     | O(V + E)         |
+| Dijkstra         | Single-source shortest path         | O((V + E) log V) |
+| Bellman-Ford     | Shortest path with negative weights | O(VE)            |
+| Floyd-Warshall   | All-pairs shortest path             | O(V³)            |
+| Prim             | Minimum Spanning Tree               | O((V + E) log V) |
+| Kruskal          | Minimum Spanning Tree               | O(E log E)       |
+| Kahn's Algorithm | Topological Sorting                 | O(V + E)         |
+| Kosaraju         | Strongly Connected Components       | O(V + E)         |
+| Tarjan           | Strongly Connected Components       | O(V + E)         |
 
 These complexities assume the common adjacency-list or edge-list implementations described in the notes.
 
@@ -1675,71 +1487,53 @@ These complexities assume the common adjacency-list or edge-list implementations
 
 # Important Terms
 
-|Term|Meaning|
-|---|---|
-|Vertex|Individual node in a graph|
-|Edge|Connection between two vertices|
-|Degree|Number of incident edges|
-|In-Degree|Number of incoming edges|
-|Out-Degree|Number of outgoing edges|
-|Path|Sequence of connected vertices|
-|Cycle|Path that returns to its starting vertex|
-|Weight|Numerical value assigned to an edge|
-|Connected Component|Maximal connected group of vertices|
-|Adjacency Matrix|Two-dimensional graph representation|
-|Adjacency List|Stores neighbors of each vertex|
-|Edge List|Stores all edges|
-|BFS|Breadth First Search|
-|DFS|Depth First Search|
-|DAG|Directed Acyclic Graph|
-|MST|Minimum Spanning Tree|
-|DSU|Disjoint Set Union|
-|Relaxation|Updating a distance when a shorter path is found|
-|Topological Sorting|Ordering of vertices in a DAG|
-|Bridge|Edge whose removal increases connected components|
-|Articulation Point|Vertex whose removal increases connected components|
-|SCC|Strongly Connected Component|
+| Term                | Meaning                                             |
+| ------------------- | --------------------------------------------------- |
+| Vertex              | Individual node in a graph                          |
+| Edge                | Connection between two vertices                     |
+| Degree              | Number of incident edges                            |
+| In-Degree           | Number of incoming edges                            |
+| Out-Degree          | Number of outgoing edges                            |
+| Path                | Sequence of connected vertices                      |
+| Cycle               | Path that returns to its starting vertex            |
+| Weight              | Numerical value assigned to an edge                 |
+| Connected Component | Maximal connected group of vertices                 |
+| Adjacency Matrix    | Two-dimensional graph representation                |
+| Adjacency List      | Stores neighbors of each vertex                     |
+| Edge List           | Stores all edges                                    |
+| BFS                 | Breadth First Search                                |
+| DFS                 | Depth First Search                                  |
+| DAG                 | Directed Acyclic Graph                              |
+| MST                 | Minimum Spanning Tree                               |
+| DSU                 | Disjoint Set Union                                  |
+| Relaxation          | Updating a distance when a shorter path is found    |
+| Topological Sorting | Ordering of vertices in a DAG                       |
+| Bridge              | Edge whose removal increases connected components   |
+| Articulation Point  | Vertex whose removal increases connected components |
+| SCC                 | Strongly Connected Component                        |
 
 ---
 
 # Important Notes
 
 1. A graph is a non-linear data structure.
-    
 2. A graph is represented as G = (V, E).
-    
 3. Graphs can be directed or undirected.
-    
 4. Graphs can be weighted or unweighted.
-    
 5. A graph can contain cycles.
-    
 6. A tree is a special type of connected, undirected, acyclic graph.
-    
 7. An undirected graph with V vertices can have at most V(V-1)/2 edges if it is simple.
-    
 8. A connected undirected graph contains at least V - 1 edges.
-    
 9. BFS uses a Queue.
-    
 10. DFS uses a Stack or Recursion.
-    
 11. BFS finds shortest paths in unweighted graphs.
-    
 12. Dijkstra does not support negative edge weights.
-    
 13. Bellman-Ford supports negative edge weights and can detect reachable negative cycles.
-    
 14. Floyd-Warshall calculates shortest paths between all pairs of vertices.
-    
 15. Prim's and Kruskal's algorithms find Minimum Spanning Trees.
-    
 16. Topological Sorting is possible only for DAGs.
-    
 17. DSU is commonly used in Kruskal's Algorithm.
-    
 18. Adjacency Lists are generally preferred for sparse graphs.
-    
 
 ---
 
@@ -1748,18 +1542,11 @@ These complexities assume the common adjacency-list or edge-list implementations
 After completing Graphs, continue with:
 
 1. Advanced Graph Algorithms
-    
 2. Shortest Path Problem Practice
-    
 3. Minimum Spanning Tree Problems
-    
 4. Strongly Connected Components
-    
 5. Bridges and Articulation Points
-    
 6. Network Flow Algorithms
-    
 7. Advanced Graph Problems
-    
 
 NOTE :- Learn graph representation, BFS and DFS thoroughly before moving to advanced algorithms. They are the foundation for almost every graph problem in DSA.

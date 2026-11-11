@@ -286,4 +286,4 @@ We generally evaluate them based on:
     
 9. [[Trie]]
     
-10. [[Disjoint Set Union (DSU)]]
+10. [[Disjoint Set Union]]
